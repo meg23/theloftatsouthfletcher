@@ -516,3 +516,9 @@ Responsive styles
 				border-top: 29px solid #009ff1; 
 				border-bottom: 29px solid #009ff1;
 			}
+
+.btn
+{
+    background-color:#34c8b2;
+    border-color:#ECF0F1;
+}

@@ -18,13 +18,12 @@ class Index(webapp2.RequestHandler):
         self.response.out.write(template.render(path, ""))
 
     def post(self):
-        contact_name = self.request.get('name')
-        contact_email = self.request.get('email')
-        contact_subject = self.request.get('subject')
-        contact_message = self.request.get('message') + "\n Signed %s, %s" % (contact_name, contact_email)
+        contact_name = self.request.get('InputName')
+        contact_email = self.request.get('InputEmail')
+        contact_message = self.request.get('InputMessage') + "\n Signed %s, %s" % (contact_name, contact_email)
 
         message = mail.EmailMessage(sender="info@theloft-1034.appspotmail.com",
-                            subject=contact_subject)
+                            subject="Message from 5211 South Fletcher")
         message.to = "info@5211southfletcher.com"
         message.body = contact_message
         message.send()
