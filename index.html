@@ -4,6 +4,15 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
     <head>
+
+        <!-- Google Tag Manager -->
+        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-T2TB7M8');</script>
+        <!-- End Google Tag Manager --> 
+
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>5211 South Fletcher</title>
@@ -21,13 +30,29 @@
         <link href='http://fonts.googleapis.com/css?family=News+Cycle:400,700' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="css/main.css">
         <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+         
+        <!-- conversion tracking -->
+        <script type="text/javascript" src="http://www.googleadservices.com/pagead/conversion_async.js" charset="utf-8"></script>
+
     </head>
 
 
     <body>
+        <!-- Google Tag Manager (noscript) -->
+        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T2TB7M8"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+        <!-- End Google Tag Manager (noscript) -->
+
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
+
+       <div id="background">
+    <img src="img/landing.jpg" class="stretch" alt="" />
+</div>
+
+	<div id="alerts"></div>
+
 
         <div id="top" class="navbar navbar-dark navbar-fixed-top" role="navigation">
             <div class="container">
@@ -111,22 +136,25 @@
         </div><!-- /.content-block content-blog-gray -->
 </div>
 
-        <div id="contact" class="content-block content-block-gray">
-           <div class="container">
-           <div class="recent-projects-title">
+        <div id="contact" class="recent-projects-title">
                <h1>Contact</h1>
             </div>
-           <div class="row">
-             <form role="form" action="/" method="post" >
-               <div class="col-lg-6 col-md-offset-1">
+        <div class="content-block">
+           <div class="container">
+           <div class="center-div" >
+             <form id="form" role="form" action="/" method="post" >
+               <div>
+                  <div class="alert alert-info">
+        <strong>Good news!</strong> We have 2 single offices for rent in Amelia Island. Contact us to find out more about the space. Pricing starts at $500.
+               </div
                  <div class="form-group">
-                   <label for="InputName">Your Name</label>
+                   <label for="InputName">Name</label>
                    <div class="input-group">
                      <input type="text" class="form-control" name="InputName" id="InputName" placeholder="Enter Name" required>
                      <span class="input-group-addon"><i class="glyphicon glyphicon-ok form-control-feedback"></i></span></div>
                  </div>
                  <div class="form-group">
-                   <label for="InputEmail">Your Email</label>
+                   <label for="InputEmail">Email</label>
                    <div class="input-group">
                      <input type="email" class="form-control" id="InputEmail" name="InputEmail" placeholder="Enter Email" required  >
                      <span class="input-group-addon"><i class="glyphicon glyphicon-ok form-control-feedback"></i></span></div>
@@ -138,32 +166,18 @@
                      <textarea name="InputMessage" id="InputMessage" class="form-control" rows="5" required></textarea>
                      <span class="input-group-addon"><i class="glyphicon glyphicon-ok form-control-feedback"></i></span></div>
                  </div>
-                <div class="form-group">
-                  <label for="InputReal">What is 4+3? (Simple Spam Checker)</label>
-                  <div class="input-group">
-                    <input type="text" class="form-control" name="InputReal" id="InputReal" required>
-                    <span class="input-group-addon"><i class="glyphicon glyphicon-ok form-control-feedback"></i></span></div>
-                </div>
-                 <input type="submit" name="submit" id="submit" value="Submit" class="btn btn-info pull-right">
+                 <input type="submit" name="submit" id="submit" value="Submit" onclick="return convert();" class="btn btn-info pull-right">
                </div>
              </form>
-             <hr class="featurette-divider hidden-lg">
-             <div class="col-lg-5 col-md-push-1">
-               <address>
-               <h3>Contact Marsha</h3>
-               <p class="lead"><a href="https://www.google.com/maps/place/5211+S+Fletcher+Ave,+Fernandina+Beach,+FL+32034/@30.5955891,-81.4538541,17z/data=!3m1!4b1!4m2!3m1!1s0x88e4559447a84f79:0xf73739e449da514">The Loft at South Fletcher<br>
-           Amelia Island, FL 32034</a><br>
-                 Phone: 904-504-7219<br>
-               </address>
-             </div>
            </div> 
            
            </div>
         </div>
 
 
+
         <footer class="content-block content-block-dark">
-            <p>&copy; Copyright Amelia Properties LLC 2015</p>
+            <p>&copy; Copyright Amelia Properties LLC 2017</p>
         </footer>     
 
         <script src="js/jquery-2.1.3.min.js"></script>
@@ -174,16 +188,6 @@
         <script src="owl-carousel/owl.carousel.js"></script>
 
         <script src="js/main.js"></script>
-
-
-   <script>
-     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-     })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-     ga('create', 'UA-38056167-2', 'auto');
-     ga('send', 'pageview');
-   </script>
 
     </body>
 

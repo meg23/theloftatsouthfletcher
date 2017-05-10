@@ -22,7 +22,7 @@ class Index(webapp2.RequestHandler):
         contact_email = self.request.get('InputEmail')
         contact_message = self.request.get('InputMessage') + "\n Signed %s, %s" % (contact_name, contact_email)
 
-        message = mail.EmailMessage(sender="info@theloft-1034.appspotmail.com",
+        message = mail.EmailMessage(sender="theloft-1034@appspot.gserviceaccount.com",
                             subject="Message from 5211 South Fletcher")
         message.to = "info@5211southfletcher.com"
         message.body = contact_message
@@ -33,12 +33,6 @@ class Index(webapp2.RequestHandler):
             'header_body': "She will get back to you soon, I promise."
         }
         path = os.path.join(os.path.dirname(__file__), 'index.html')
-        self.response.out.write(template.render(path, ""))
-
-class Meet(webapp2.RequestHandler):
-
-    def get(self):
-        path = os.path.join(os.path.dirname(__file__), 'meet.html')
         self.response.out.write(template.render(path, ""))
 
 app = webapp2.WSGIApplication([('/', Index )], debug=True)
